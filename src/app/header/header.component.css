@@ -1,0 +1,12 @@
+.header{
+    background-color: #201848;
+    overflow:hidden;
+    padding:0 10%;
+}
+
+.header a{
+    display:inline;
+    color: #f2f2f2;
+    float: right;
+    text-decoration: none;
+}

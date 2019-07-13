@@ -1,0 +1,17 @@
+.top-navigation {
+    background-color: #281E5A;
+    overflow: hidden;
+    padding:0 10%;
+}
+
+.navigation-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation-menu li {
+  float:right;
+  margin:1%;
+}
