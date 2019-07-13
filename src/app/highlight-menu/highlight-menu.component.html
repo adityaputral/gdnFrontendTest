@@ -1,0 +1,8 @@
+<div class="highlight">
+    <div class="highlight-row" *ngFor='let hmv of highLightMenuValue'>
+        <a href="/" style="text-decoration: none">
+            <img [src]='hmv.image' style="width:50%">
+            <div class="highlight-caption">{{ hmv.name }}</div>
+        </a>
+    </div>
+</div>
