@@ -1,32 +1,36 @@
-<div class="row-flex">
-    <div class="slideshow-container">
-
-        <div class="mySlides" *ngFor='let bmv of bannerMenuValue;'>
-            <img [src]='bmv.image'>
-        </div>
-
-        <!-- <img [src]='bannerMenuValue[1].image' style="width:100%"> -->
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
+<div style="margin-top:20px">
+    <div style="text-align:right;margin-right:12%;">
+        <a href="/" style="font-size: 16px;color: #e61e64;font-weight: 700;text-decoration: none;">Lihat
+            Semua</a>
     </div>
+    <div class="row-flex">
+        <div class="slideshow-container">
 
-    <div class="col-flex">
-        <div>
-            <img [src]='bannerMenuValue[5].image' style="height: 150px;width: 100%;object-fit: cover">
+            <div class="mySlides" *ngFor='let bmv of bannerMenuValue;'>
+                <img [src]='bmv.image'>
+            </div>
+
+            <!-- <img [src]='bannerMenuValue[1].image' style="width:100%"> -->
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
         </div>
-        <div>
-            <img [src]='bannerMenuValue[6].image' style="height: 150px;width: 100%;object-fit: cover ">
+
+        <div class="col-flex">
+            <div>
+                <img [src]='bannerMenuValue[5].image' style="height: 150px;width: 100%;object-fit: cover">
+            </div>
+            <div>
+                <img [src]='bannerMenuValue[6].image' style="height: 150px;width: 100%;object-fit: cover ">
+            </div>
         </div>
     </div>
 </div>
-
-<br>
