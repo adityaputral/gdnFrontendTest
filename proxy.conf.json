@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.gramedia.com/api",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "changeOrigin": true
+}

@@ -10,7 +10,6 @@ export class BannersComponent implements OnInit {
   bannerMenuValue: Object;
 
   slideIndex: any = 1;
-  bannerIndex = 1;
 
   constructor(private bannerService: BannerService) { }
 

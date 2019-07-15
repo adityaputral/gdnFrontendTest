@@ -6,7 +6,7 @@
     <div class="row-flex">
         <div class="slideshow-container">
 
-            <div class="mySlides" *ngFor='let bmv of bannerMenuValue;let i=index;'>
+            <div class="mySlides" *ngFor='let bmv of bannerMenuValue;'>
                 <a [href]="bmv.clickUrl">
                     <img [src]='bmv.image'>
                 </a>
@@ -22,13 +22,13 @@
 
         <div class="col-flex">
             <div>
-                <a [href]="bannerMenuValue[5].clickUrl">
+                <a [href]="bannerMenuValue[bannerMenuValue.length-2].clickUrl">
                     <img [src]='bannerMenuValue[5].image'
                         style="height: 150px;width: 100%;object-fit: cover; border-radius: 10px;">
                 </a>
             </div>
             <div>
-                <a [href]="bannerMenuValue[6].clickUrl">
+                <a [href]="bannerMenuValue[bannerMenuValue.length-1].clickUrl">
                     <img [src]='bannerMenuValue[6].image'
                         style="height: 150px;width: 100%;object-fit: cover ; border-radius: 10px;">
                 </a>
