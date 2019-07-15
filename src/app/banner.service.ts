@@ -9,7 +9,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 })
 export class BannerService {
 
-  private _bannerMenuUrl = 'https://www.gramedia.com/api/banners/?per_page=7';
+  private _bannerMenuUrl = '/api/banners/?per_page=7';
 
   constructor(private _http: HttpClient) { }
 

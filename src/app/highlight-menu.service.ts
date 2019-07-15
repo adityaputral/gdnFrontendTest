@@ -7,7 +7,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HighlightMenuService {
-  private _highlightMenuUrl = 'https://www.gramedia.com/api/highlight-menu/';
+  private _highlightMenuUrl = '/api/highlight-menu/';
 
   constructor(private _http: HttpClient) { }
 

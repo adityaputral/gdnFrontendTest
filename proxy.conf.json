@@ -1,8 +1,11 @@
 {
   "/api/*": {
-    "target": "https://www.gramedia.com/api",
+    "target": "https://www.gramedia.com",
     "secure": false,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
   },
   "changeOrigin": true
 }
