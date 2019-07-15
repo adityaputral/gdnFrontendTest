@@ -2,6 +2,7 @@
     background-color: #281E5A;
     overflow: hidden;
     padding:0 10%;
+    box-shadow: 0px 3px 15px 0px rgba(43, 43, 43, 0.48);
 }
 
 .navigation-menu ul {

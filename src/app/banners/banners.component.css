@@ -4,9 +4,9 @@
 
 .mySlides img {
     height: 310px;
-    margin: 0 auto;
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .slideshow-container {

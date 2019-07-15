@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BannerService } from '../banner.service';
-import { Banner } from '../banner.model';
 
 @Component({
   selector: 'banners',
@@ -8,39 +7,53 @@ import { Banner } from '../banner.model';
   styleUrls: ['./banners.component.css']
 })
 export class BannersComponent implements OnInit {
-  bannerMenuValue: Banner[] ;
+  bannerMenuValue: Object;
 
-  mainCarousel: any = [];
-  miniBanner: any = [];
+  slideIndex: any = 1;
+  bannerIndex = 1;
 
   constructor(private bannerService: BannerService) { }
 
   getBanners(): void {
-    this.bannerService.getHighlightMenu().
+    this.bannerService.getBanner().
       subscribe(resBannerService => this.bannerMenuValue = resBannerService);
-  }
-
-  getMainBanner(): void {
-    for (let i = 0; i < this.bannerMenuValue.length - 2; i++) {
-      this.mainCarousel[i] = this.bannerMenuValue[i];
-    }
-  }
-
-  getLastBanner(total: number): void {
-    var counter = this.bannerMenuValue.length - 1;
-    for (let i = 0; i < total; i++) {
-      this.miniBanner[i] = this.bannerMenuValue[counter];
-      counter--;
-    }
   }
 
   ngOnInit() {
     this.getBanners();
-    // this.getMainBanner();
-    // this.getLastBanner(2);
+  }
 
-    // let elementes = document.getElementsByClassName("mySlides");
-    // let imageToDisplay = elementes.item(0) as HTMLElement;
-    // imageToDisplay.style.display="block";
+  ngAfterViewInit() {
+    this.showSlides(1);
+  }
+
+  showSlides(n) {
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { this.slideIndex = 1 }
+    if (n < 1) { this.slideIndex = slides.length; }
+
+    for (let i = 0; i < slides.length; i++) {
+      let imageToDisplay = slides.item(i) as HTMLElement;
+      imageToDisplay.style.display = "none";
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    let imgDisplay = slides.item(this.slideIndex-1) as HTMLElement;
+    imgDisplay.style.display = "block";
+
+    let dotDisplay = dots.item(this.slideIndex-1) as HTMLElement;
+    dotDisplay.className += " active";
+  }
+
+  currentSlide(n) {
+    this.showSlides(this.slideIndex = n);
+  }
+  plusSlides(n) {
+    this.showSlides(this.slideIndex += n);
   }
 }

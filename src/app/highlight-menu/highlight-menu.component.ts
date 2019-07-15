@@ -7,11 +7,11 @@ import { HighlightMenuService } from '../highlight-menu.service';
   styleUrls: ['./highlight-menu.component.css']
 })
 export class HighlightMenuComponent implements OnInit {
-  highLightMenuValue:any = [];
+  highLightMenuValue:Object;
 
   constructor(private highlightMenuService: HighlightMenuService) { }
 
-  getHighlightMenu(): void {
+  getHighlightMenu(){
     this.highlightMenuService.getHighlightMenu().
     subscribe(resHighlightMenu => this.highLightMenuValue = resHighlightMenu);
   }

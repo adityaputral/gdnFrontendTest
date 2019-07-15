@@ -8,8 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { HighlightMenuComponent } from './highlight-menu/highlight-menu.component';
 import { BannersComponent } from './banners/banners.component';
-import { BannerService } from './banner.service';
-import { HighlightMenuService } from './highlight-menu.service';
 
 
 @NgModule({
@@ -26,7 +24,7 @@ import { HighlightMenuService } from './highlight-menu.service';
     HttpModule,
     HttpClientModule
   ],
-  providers: [BannerService, HighlightMenuService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
