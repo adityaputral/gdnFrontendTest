@@ -31,16 +31,17 @@
 border-radius: 4px;
 background-color: white;
 margin:auto 2px;
+
 }
 
 .search-box input{
 display: inline-block;
 border: none;
 height: 38px;
-box-sizing: content-box;
 border-radius: 4px;
 position: relative;
 padding:0 20px;
+width: 30vw;
 }
 
 .search-box .search-icon{
